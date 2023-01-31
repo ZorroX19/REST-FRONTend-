@@ -191,11 +191,11 @@ class Feed extends Component {
 
         return fetch("http://localhost:8080/graphql", {
           method: "POST",
-          body: JSON.stringify(graphqlQuery),
           headers: {
             Authorization: "Bearer " + this.props.token,
             "Content-Type": "application/json",
           },
+          body: JSON.stringify(graphqlQuery),
         });
       })
 
